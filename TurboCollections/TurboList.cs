@@ -1,7 +1,11 @@
 ﻿using System;
 
-namespace TurboCollections;
+namespace TurboCollections{
 
 public class TurboList<T>
 {
+    
+} 
+
+
 }
