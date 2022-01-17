@@ -4,11 +4,7 @@
     <projectFile>CustomerManagment/CustomerManagment.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0c8fa1e-d20a-4507-a82b-f0e1f4ad4d57" name="Changes" comment="Add console writeline">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboList.cs" afterDir="false" />
-    </list>
+    <list default="true" id="c0c8fa1e-d20a-4507-a82b-f0e1f4ad4d57" name="Changes" comment="Add turbolist" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642449412932</updated>
-      <workItem from="1642449415618" duration="4583000" />
+      <workItem from="1642449415618" duration="4897000" />
     </task>
     <task id="LOCAL−00001" summary="Add solution">
       <created>1642449487383</created>
@@ -87,7 +83,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1642451592682</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Add turbolist">
+      <created>1642456176893</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1642456176893</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +115,7 @@
     <MESSAGE value="Add TurboCollection Project" />
     <MESSAGE value="Add CustomerManagement Project" />
     <MESSAGE value="Add console writeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add console writeline" />
+    <MESSAGE value="Add turbolist" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add turbolist" />
   </component>
 </project>
