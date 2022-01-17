@@ -4,7 +4,12 @@
     <projectFile>CustomerManagment/CustomerManagment.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0c8fa1e-d20a-4507-a82b-f0e1f4ad4d57" name="Changes" comment="Add turbolist" />
+    <list default="true" id="c0c8fa1e-d20a-4507-a82b-f0e1f4ad4d57" name="Changes" comment="Add turbolist">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollection.Test/TurboListTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollection.Test/TurboListTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboList.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +34,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Project.CustomerManagment">
+  <component name="RunManager" selected="cfb6aace-61bf-4496-a864-62d95a9fe2a1">
     <configuration name="CustomerManagment" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -57,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642449412932</updated>
-      <workItem from="1642449415618" duration="4897000" />
+      <workItem from="1642449415618" duration="11043000" />
     </task>
     <task id="LOCAL−00001" summary="Add solution">
       <created>1642449487383</created>
