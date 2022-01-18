@@ -4,9 +4,7 @@
     <projectFile>CustomerManagment/CustomerManagment.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0c8fa1e-d20a-4507-a82b-f0e1f4ad4d57" name="Changes" comment="Add turbolist">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c0c8fa1e-d20a-4507-a82b-f0e1f4ad4d57" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642449412932</updated>
-      <workItem from="1642449415618" duration="13554000" />
+      <workItem from="1642449415618" duration="13964000" />
     </task>
     <task id="LOCAL−00001" summary="Add solution">
       <created>1642449487383</created>
