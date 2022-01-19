@@ -69,6 +69,17 @@ namespace TurboCollection.Test
         Assert.AreEqual(setIndex+1, list.Count);
         Assert.AreEqual(666, list.Get(setIndex));
     }
+    
+    [Test]
+    public void ExtendingTroughSettingPersistsOldValues()
+    {
+        const int setIndex = 100;
+        var (numbers, list) = CreateTestData();
+        list.Set(setIndex, 666); for (int i = 0; i < numbers.Length; i++)
+        {
+            Assert.AreEqual(numbers[i], list.Get(i));
+        }
+    }
 
     (int[] numbers, TurboList<int>) CreateTestData()
     {
