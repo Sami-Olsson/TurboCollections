@@ -44,10 +44,7 @@ namespace TurboCollection.Test
     [Test]
     public void MultipleAnAddedElementCanBeGotten()
     {
-        int[] numbers = {5, 7, -12, 9, 3, -4, 104, 12};
-        var list = new TurboList<int>();
-        foreach(var number in numbers)
-                list.Add(number);
+         var (numbers, list) = CreateTestData();
         for (int i = 0; i < numbers.Length; i++)
         {
             Assert.AreEqual(numbers[i], list.Get(i));
@@ -55,7 +52,23 @@ namespace TurboCollection.Test
         
     }
     
-    
+    [Test]
+    public void ExistingItemsCanBeOverwrittenBySetting()
+    {
+        var (_, list) = CreateTestData();
+        list.Set(2, 666);
+        Assert.AreEqual(666, list.Get(2));
+    }
+
+    (int[] numbers, TurboList<int>) CreateTestData()
+    {
+        int[] numbers = {5, 7, -12, 9, 3, -4, 104, 12};
+        var list = new TurboList<int>();
+        foreach(var number in numbers)
+            list.Add(number);
+        
+        return (numbers, list);
+    }
     
   } 
 
