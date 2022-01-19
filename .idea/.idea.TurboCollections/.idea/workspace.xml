@@ -62,7 +62,8 @@
       <updated>1642449412932</updated>
       <workItem from="1642449415618" duration="13964000" />
       <workItem from="1642494291955" duration="3442000" />
-      <workItem from="1642588347159" duration="4421000" />
+      <workItem from="1642588347159" duration="5636000" />
+      <workItem from="1642626004104" duration="630000" />
     </task>
     <task id="LOCAL−00001" summary="Add solution">
       <created>1642449487383</created>
@@ -123,5 +124,17 @@
     <MESSAGE value="Add console writeline" />
     <MESSAGE value="Add turbolist" />
     <option name="LAST_COMMIT_MESSAGE" value="Add turbolist" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet Exception Breakpoints">
+          <properties exception="System.IndexOutOfRangeException" isInternal="false" displayValue="IndexOutOfRangeException" namespaceName="System">
+            <option name="internal" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
