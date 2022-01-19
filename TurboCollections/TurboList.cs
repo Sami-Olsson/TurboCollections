@@ -6,11 +6,7 @@ public class TurboList<T>
 {
     public int Count { get; private set; }
     private T[] items = Array.Empty<T>();
-    public TurboList()
-    {
-        
-        Console.WriteLine("Hello, Turbo!");
-    }
+ 
 
     public void Add(T item)
     {    
@@ -43,6 +39,11 @@ public class TurboList<T>
     public T Get(int index)
     {
         return items[index];
+    }
+
+    public void Set(int index, T item)
+    {
+       items[index] = item;
     }
 } 
 
