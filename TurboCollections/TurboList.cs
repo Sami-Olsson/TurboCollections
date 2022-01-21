@@ -55,6 +55,11 @@ public class TurboList<T>
         }
         Count = 0;
     }
+
+    public void RemoveAt(int index)
+    {
+        Count--;
+    }
 } 
 
 
