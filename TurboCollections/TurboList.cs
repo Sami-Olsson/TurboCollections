@@ -43,11 +43,7 @@ public class TurboList<T>
 
     public void Set(int index, T item)
     {
-        if (index >= Count)
-        {
-           EnsureSize(index+1);
-           Count = index + 1;
-        }
+        
         items[index] = item;
     }
 } 

@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using TurboCollections;
 
@@ -61,25 +62,15 @@ namespace TurboCollection.Test
     } 
     
     [Test]
-    public void CanBeExtendedBySetting()
+    public void CanNotBeExtendedBySetting()
     {
         const int setIndex = 100;
         var (_, list) = CreateTestData();
-        list.Set(setIndex, 666);
-        Assert.AreEqual(setIndex+1, list.Count);
-        Assert.AreEqual(666, list.Get(setIndex));
+        Assert.Throws<IndexOutOfRangeException>(()=>list.Set(setIndex, 666));
+      
     }
     
-    [Test]
-    public void ExtendingTroughSettingPersistsOldValues()
-    {
-        const int setIndex = 100;
-        var (numbers, list) = CreateTestData();
-        list.Set(setIndex, 666); for (int i = 0; i < numbers.Length; i++)
-        {
-            Assert.AreEqual(numbers[i], list.Get(i));
-        }
-    }
+  
 
     (int[] numbers, TurboList<int>) CreateTestData()
     {
