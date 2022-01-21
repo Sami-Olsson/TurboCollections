@@ -112,6 +112,16 @@ namespace TurboCollection.Test
         
        Assert.AreEqual(numbers.Length-1, list.Count);
     }
+    [Test]
+    public void ItemsAreMovedForwardWhenRemovingAt()
+    {
+        var (numbers, list) = CreateTestData();
+
+        list.RemoveAt(2);
+
+        for (int i = 2; i < numbers.Length-1; i++)
+            Assert.AreEqual(numbers[i+1], list.Get(i), $"Wrong item at index {i}");
+    }
 
     (int[] numbers, TurboList<int>) CreateTestData()
     {
