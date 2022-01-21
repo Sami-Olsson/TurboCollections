@@ -69,7 +69,40 @@ namespace TurboCollection.Test
         Assert.Throws<IndexOutOfRangeException>(()=>list.Set(setIndex, 666));
       
     }
+    [Test]
+    public void IsEmptyAfterClearing()
+    {
+       
+        var (_, list) = CreateTestData();
+        list.Clear();
+        Assert.Zero(list.Count);
+    }
     
+    [Test]
+    public void FirstItemIsAddedAtIndexZeroAfterClearing()
+    {
+       
+        var (_, list) = CreateTestData();
+        list.Clear();
+        list.Add(5);
+        Assert.AreEqual(1,list.Count);
+        Assert.AreEqual(5, list.Get(0));
+    }
+    [Test]
+    public void ItemsAreClearedWhenClearing()
+    {
+        // given
+        var (numbers, list) = CreateTestData();
+        
+        //when
+        list.Clear();
+        
+        //then
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Assert.Zero(list.Get(i));
+        }
+    }
   
 
     (int[] numbers, TurboList<int>) CreateTestData()

@@ -46,6 +46,15 @@ public class TurboList<T>
         
         items[index] = item;
     }
+
+    public void Clear()
+    {
+        for (int i = 0; i < Count; i++)
+        {
+            items[i] = default;
+        }
+        Count = 0;
+    }
 } 
 
 
