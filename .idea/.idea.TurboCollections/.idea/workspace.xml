@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0c8fa1e-d20a-4507-a82b-f0e1f4ad4d57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollection.Test/TurboListTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollection.Test/TurboListTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboList.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
       <workItem from="1642494291955" duration="3442000" />
       <workItem from="1642588347159" duration="5636000" />
       <workItem from="1642626004104" duration="1948000" />
-      <workItem from="1642715256434" duration="7534000" />
+      <workItem from="1642715256434" duration="9230000" />
     </task>
     <task id="LOCAL−00001" summary="Add solution">
       <created>1642449487383</created>

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace TurboCollections{
 
-public class TurboList<T>
+public class TurboList<T> : IEnumerable<T>
 {
     public int Count { get; private set; }
     private T[] items = Array.Empty<T>();
@@ -68,15 +70,7 @@ public class TurboList<T>
 
     public bool Contains(T item)
     {
-        
-        for (int i = 0; i < Count; i++)
-        {
-            if (item.Equals(items[i]) )
-            
-                return true; 
-        }
-
-        return false;
+        return IndexOf(item) != -1;
     }
     
     public int IndexOf(T item)
@@ -91,6 +85,81 @@ public class TurboList<T>
 
         return -1;
     }
-        
-  }
+
+    public void Remove(T item)
+    {
+        var index = IndexOf(item);
+        if (index == -1)
+            return;
+        RemoveAt(index);
+    }
+
+    public void AddRange(IEnumerable<T> items)
+    {
+        foreach (var item in items)
+        {
+            Add(item);
+        }
+    }
+
+    public Enumerator GetEnumerator()
+    {
+        return new Enumerator(items, Count);
+    }
+
+    IEnumerator<T> IEnumerable<T>.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
+    }
+    
+    public struct Enumerator : IEnumerator<T>
+    {
+        private readonly T[] _items;
+        private readonly int _count;
+        private int _index;
+
+        public Enumerator(T[] items, int count)
+        {
+            _items = items;
+            _count = count;
+            _index = -1;
+            Current = default;
+        }
+        public bool MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public T Current { get; }
+
+        object IEnumerator.Current => Current;
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
+  
+    
+    
+    // public IEnumerator<T> GetEnumerator()
+    //{
+       // throw new NotImplementedException();
+    //}
+
+   // IEnumerator IEnumerable.GetEnumerator()
+    //{
+       // return GetEnumerator();
+   // }
+}
 }
