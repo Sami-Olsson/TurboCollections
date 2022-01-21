@@ -128,38 +128,31 @@ public class TurboList<T> : IEnumerable<T>
             _items = items;
             _count = count;
             _index = -1;
-            Current = default;
+            
         }
         public bool MoveNext()
         {
-            throw new NotImplementedException();
+            if (_index >= _count)
+                return false;
+           
+            return ++_index < _count;
         }
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            _index = -1;
         }
 
-        public T Current { get; }
+        public T Current => _items[_index];
 
         object IEnumerator.Current => Current;
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Reset();
         }
     }
   
     
-    
-    // public IEnumerator<T> GetEnumerator()
-    //{
-       // throw new NotImplementedException();
-    //}
-
-   // IEnumerator IEnumerable.GetEnumerator()
-    //{
-       // return GetEnumerator();
-   // }
 }
 }
