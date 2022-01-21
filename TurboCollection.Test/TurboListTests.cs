@@ -68,41 +68,46 @@ namespace TurboCollection.Test
         var (_, list) = CreateTestData();
         Assert.Throws<IndexOutOfRangeException>(()=>list.Set(setIndex, 666));
       
-    }
-    [Test]
-    public void IsEmptyAfterClearing()
-    {
-       
-        var (_, list) = CreateTestData();
-        list.Clear();
-        Assert.Zero(list.Count);
-    }
+    } 
     
-    [Test]
-    public void FirstItemIsAddedAtIndexZeroAfterClearing()
+    public class WhenClearing
     {
-       
-        var (_, list) = CreateTestData();
-        list.Clear();
-        list.Add(5);
-        Assert.AreEqual(1,list.Count);
-        Assert.AreEqual(5, list.Get(0));
-    }
-    [Test]
-    public void ItemsAreClearedWhenClearing()
-    {
-        // given
-        var (numbers, list) = CreateTestData();
-        
-        //when
-        list.Clear();
-        
-        //then
-        for (int i = 0; i < numbers.Length; i++)
+        [Test]
+        public void ItIsEmpty()
         {
-            Assert.Zero(list.Get(i));
+       
+            var (_, list) = CreateTestData();
+            list.Clear();
+            Assert.Zero(list.Count);
+        }
+    
+        [Test]
+        public void AddingStartsAtIndexZero()
+        {
+       
+            var (_, list) = CreateTestData();
+            list.Clear();
+            list.Add(5);
+            Assert.AreEqual(1,list.Count);
+            Assert.AreEqual(5, list.Get(0));
+        }
+        [Test]
+        public void ItemsAreResetToDefault()
+        {
+            // given
+            var (numbers, list) = CreateTestData();
+        
+            //when
+            list.Clear();
+        
+            //then
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Assert.Zero(list.Get(i));
+            }
         }
     }
+    
     [Test]
     public void CountIsReducedWhenRemovingAt()
     {

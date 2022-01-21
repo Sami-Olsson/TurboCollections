@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace TurboCollections{
 
@@ -64,7 +65,32 @@ public class TurboList<T>
         }
         Count--;
     }
-} 
 
+    public bool Contains(T item)
+    {
+        
+        for (int i = 0; i < Count; i++)
+        {
+            if (item.Equals(items[i]) )
+            
+                return true; 
+        }
 
+        return false;
+    }
+    
+    public int IndexOf(T item)
+    {
+        
+        for (int i = 0; i < Count; i++)
+        {
+            if (item.Equals(items[i]))
+
+                return i;
+        }
+
+        return -1;
+    }
+        
+  }
 }
