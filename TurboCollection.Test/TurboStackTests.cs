@@ -26,7 +26,17 @@ namespace TurboCollection.Test
             [Test]
             public void HasAcountOfZero()
             {
-                
+                Assert.Zero(stack.Count);
+            }
+        }
+        
+        
+        public class WhenPushing
+        {
+            [Test]
+            public void IncreasesCount()
+            {
+                TurboStack<int> stack = new();
             }
         }
     }
