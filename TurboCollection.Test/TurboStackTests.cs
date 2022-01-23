@@ -13,31 +13,35 @@ namespace TurboCollection.Test
             Assert.Pass();
         } 
         
-        public class ANewStack
+        public class GivenANewStack
         {
-            private TurboStack<int> stack;
-
-            [SetUp]
-            public void Setup()
+            private static  TurboStack<int> Give()
             {
-                this.stack = new TurboStack<int>();
+                return new TurboStack<int>();
             }
             
             [Test]
-            public void HasAcountOfZero()
+            public void ItHasAcountOfZero()
             {
-                Assert.Zero(stack.Count);
+                Assert.Zero(Give().Count);
+            }
+            
+            public class WhenPushing
+            {
+                [TestCase(1), TestCase(5), TestCase(1337)]
+                public void ItIncreasesCount(int count)
+                {
+                    var stack = Give();
+                    for (int i = 0; i < count; i++)
+                    {
+                        stack.Push(3);
+                    }
+                    Assert.AreEqual(count, stack.Count);
+                }
             }
         }
         
         
-        public class WhenPushing
-        {
-            [Test]
-            public void IncreasesCount()
-            {
-                TurboStack<int> stack = new();
-            }
-        }
+       
     }
 }
