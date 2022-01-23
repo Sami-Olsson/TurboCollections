@@ -75,9 +75,40 @@ namespace TurboCollection.Test
                 
                 
             }
+        } 
+        
+        public class GivenAStackWithContent
+        {
+            private static  TurboStack<int> Give(int count)
+            {
+                var stack = new TurboStack<int>();
+                for (int i = 0; i < count; i++)
+                {
+                    stack.Push(3);
+                }
+
+                return stack;
+            }
+
+            [Test]
+            public void CountIsNotZero()
+            {
+                var stack = Give(7);
+                Assert.NotZero(stack.Count);
+            }
+            
+            public class WhenPopping
+            {
+                [TestCase(1)]
+                [TestCase(7)]
+                [TestCase(999)]
+                public void ItDecreasesCount(int count)
+                {
+                    var stack = Give(count);
+                    stack.Pop();
+                    Assert.AreEqual(count - 1, stack.Count);
+                }
+            }
         }
-        
-        
-       
     }
 }

@@ -21,7 +21,7 @@ namespace TurboCollections
         
         public T Pop()
         {
-            return items[Count - 1];
+            return items[--Count];
         }
     }
 }
