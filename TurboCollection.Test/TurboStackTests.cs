@@ -112,7 +112,7 @@ namespace TurboCollection.Test
         }
 
         [Test]
-        public void FulfillSample()
+        public void PassesSmokeTest()
         {
             var stack = new TurboStack<int>();// --
             Assert.Zero(stack.Count);

@@ -21,7 +21,9 @@ namespace TurboCollections
         
         public T Pop()
         {
-            return items[--Count];
+            var result = items[--Count];
+            items[Count] = default;
+            return result;
         }
     }
 }
