@@ -110,5 +110,22 @@ namespace TurboCollection.Test
                 }
             }
         }
+
+        [Test]
+        public void FulfillSample()
+        {
+            var stack = new TurboStack<int>();// --
+            Assert.Zero(stack.Count);
+            
+            stack.Push(5); // 5
+            Assert.AreEqual(1, stack.Count);
+            Assert.AreEqual(5, stack.Peek());
+            
+            stack.Push(7); // 5-7
+            Assert.AreEqual(7, stack.Pop()); //5
+            Assert.AreEqual(5, stack.Pop()); // --
+            Assert.Zero(stack.Count);
+            
+        }
     }
 }
